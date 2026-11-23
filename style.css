@@ -404,10 +404,73 @@ body {
 
 
 /* =========================================
-   13. RESPONSIVE DESIGN
+   13. START GAME BUTTON
+========================================= */
+
+#start-button {
+
+    padding: 13px 40px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background: #16a34a;
+
+    border: 2px solid #0d6b30;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 4px 8px rgba(0, 0, 0, 0.4);
+
+    transition: 0.2s;
+
+    /* Better mobile touch interaction */
+    touch-action: manipulation;
+
+}
+
+
+/* Hover Effect */
+
+#start-button:hover {
+
+    background: #15803d;
+
+    transform: scale(1.05);
+
+}
+
+
+/* Click Effect */
+
+#start-button:active {
+
+    transform: scale(0.95);
+
+}
+
+
+/* =========================================
+   14. RESPONSIVE DESIGN
 ========================================= */
 
 @media (max-width: 500px) {
+
+    .game-container {
+
+        gap: 16px;
+
+        padding: 15px;
+
+    }
+
 
     #simon-device {
 
@@ -417,11 +480,13 @@ body {
 
     }
 
+
     .center-panel {
 
         border-width: 5px;
 
     }
+
 
     .game-button {
 
@@ -429,15 +494,26 @@ body {
 
     }
 
+
     #game-title {
 
         font-size: 25px;
 
     }
 
+
     #game-status {
 
         font-size: 16px;
+
+    }
+
+
+    #start-button {
+
+        padding: 14px 40px;
+
+        font-size: 18px;
 
     }
 

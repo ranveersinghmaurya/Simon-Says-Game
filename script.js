@@ -11,6 +11,9 @@ let gameTitle = document.querySelector("#game-title");
 
 let gameStatus = document.querySelector("#game-status");
 
+// Select Start Game button
+let startButton = document.querySelector("#start-button");
+
 
 
 /* =========================================
@@ -38,10 +41,10 @@ let isShowingSequence = false;
 
 
 /* =========================================
-   3. KEYBOARD EVENT
+   3. START BUTTON EVENT
 ========================================= */
 
-document.addEventListener("keydown", function () {
+startButton.addEventListener("click", function () {
 
     // Start game only if it is not running
     if (gameStarted === false) {
@@ -71,6 +74,9 @@ function startGame() {
     gameStarted = true;
 
     isShowingSequence = false;
+
+    // Hide Start Game button
+    startButton.style.display = "none";
 
     // Reset heading
     gameTitle.innerText = "Simon Says Game";
@@ -155,11 +161,6 @@ async function flashButton(color) {
    8. SHOW COMPUTER SEQUENCE
 ========================================= */
 
-
-/* =========================================
-   SHOW ONLY THE NEW BUTTON
-========================================= */
-
 async function showSequence() {
 
     // Lock user input
@@ -178,7 +179,6 @@ async function showSequence() {
     isShowingSequence = false;
 
 }
-
 
 
 
@@ -273,8 +273,12 @@ function gameOver() {
     gameTitle.innerText = "Game Over!";
 
     // Display final level
-    gameStatus.innerText =
-        "You reached Level " + level +
-        " | Press any key to restart";
+    gameStatus.innerText = "You reached Level " + level;
+
+    // Change button text
+    startButton.innerText = "Play Again";
+
+    // Show restart button
+    startButton.style.display = "block";
 
 }
