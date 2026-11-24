@@ -75,6 +75,23 @@ body {
 }
 
 
+/* Creator Name */
+
+#creator-name {
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #facc15;
+
+    margin-bottom: 10px;
+
+}
+
+
 #game-status {
 
     font-size: 20px;
@@ -431,13 +448,10 @@ body {
 
     transition: 0.2s;
 
-    /* Better mobile touch interaction */
     touch-action: manipulation;
 
 }
 
-
-/* Hover Effect */
 
 #start-button:hover {
 
@@ -448,8 +462,6 @@ body {
 }
 
 
-/* Click Effect */
-
 #start-button:active {
 
     transform: scale(0.95);
@@ -458,7 +470,115 @@ body {
 
 
 /* =========================================
-   14. RESPONSIVE DESIGN
+   14. HOW TO PLAY BUTTON
+========================================= */
+
+#how-to-play-button {
+
+    padding: 12px 35px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background: #2563eb;
+
+    border: 2px solid #1e40af;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 4px 8px rgba(0, 0, 0, 0.4);
+
+    transition: 0.2s;
+
+    touch-action: manipulation;
+
+}
+
+
+#how-to-play-button:hover {
+
+    background: #1d4ed8;
+
+    transform: scale(1.05);
+
+}
+
+
+#how-to-play-button:active {
+
+    transform: scale(0.95);
+
+}
+
+
+/* =========================================
+   15. YOUTUBE TUTORIAL LINKS
+========================================= */
+
+#tutorial-links {
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 220px;
+
+}
+
+
+#tutorial-links a {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background: #16a34a;
+
+    border: 2px solid #0d6b30;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+
+    touch-action: manipulation;
+
+}
+
+
+#tutorial-links a:hover {
+
+    background: #15803d;
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================================
+   16. RESPONSIVE DESIGN
 ========================================= */
 
 @media (max-width: 500px) {
@@ -502,6 +622,13 @@ body {
     }
 
 
+    #creator-name {
+
+        font-size: 12px;
+
+    }
+
+
     #game-status {
 
         font-size: 16px;
@@ -514,6 +641,22 @@ body {
         padding: 14px 40px;
 
         font-size: 18px;
+
+    }
+
+
+    #how-to-play-button {
+
+        padding: 12px 35px;
+
+        font-size: 17px;
+
+    }
+
+
+    #tutorial-links {
+
+        width: 220px;
 
     }
 

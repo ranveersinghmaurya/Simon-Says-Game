@@ -14,6 +14,12 @@ let gameStatus = document.querySelector("#game-status");
 // Select Start Game button
 let startButton = document.querySelector("#start-button");
 
+// Select How to Play button
+let howToPlayButton = document.querySelector("#how-to-play-button");
+
+// Select tutorial links container
+let tutorialLinks = document.querySelector("#tutorial-links");
+
 
 
 /* =========================================
@@ -58,7 +64,30 @@ startButton.addEventListener("click", function () {
 
 
 /* =========================================
-   4. START GAME FUNCTION
+   4. HOW TO PLAY BUTTON EVENT
+========================================= */
+
+howToPlayButton.addEventListener("click", function () {
+
+    // Check whether tutorial links are visible
+    if (tutorialLinks.style.display === "flex") {
+
+        // Hide tutorial links
+        tutorialLinks.style.display = "none";
+
+    } else {
+
+        // Show tutorial links vertically
+        tutorialLinks.style.display = "flex";
+
+    }
+
+});
+
+
+
+/* =========================================
+   5. START GAME FUNCTION
 ========================================= */
 
 function startGame() {
@@ -89,7 +118,7 @@ function startGame() {
 
 
 /* =========================================
-   5. NEXT LEVEL FUNCTION
+   6. NEXT LEVEL FUNCTION
 ========================================= */
 
 function nextLevel() {
@@ -120,7 +149,7 @@ function nextLevel() {
 
 
 /* =========================================
-   6. DELAY FUNCTION
+   7. DELAY FUNCTION
 ========================================= */
 
 function delay(time) {
@@ -136,7 +165,7 @@ function delay(time) {
 
 
 /* =========================================
-   7. FLASH BUTTON FUNCTION
+   8. FLASH BUTTON FUNCTION
 ========================================= */
 
 async function flashButton(color) {
@@ -158,7 +187,7 @@ async function flashButton(color) {
 
 
 /* =========================================
-   8. SHOW COMPUTER SEQUENCE
+   9. SHOW COMPUTER SEQUENCE
 ========================================= */
 
 async function showSequence() {
@@ -183,7 +212,7 @@ async function showSequence() {
 
 
 /* =========================================
-   9. CHECK USER ANSWER
+   10. CHECK USER ANSWER
 ========================================= */
 
 function checkAnswer(color) {
@@ -230,7 +259,7 @@ function checkAnswer(color) {
 
 
 /* =========================================
-   10. BUTTON CLICK EVENTS
+   11. BUTTON CLICK EVENTS
 ========================================= */
 
 for (let button of buttons) {
@@ -259,7 +288,7 @@ for (let button of buttons) {
 
 
 /* =========================================
-   11. GAME OVER FUNCTION
+   12. GAME OVER FUNCTION
 ========================================= */
 
 function gameOver() {
